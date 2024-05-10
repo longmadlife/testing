@@ -5,9 +5,6 @@ app = Flask(__name__)
 CORS(app)
 
 uabval = ""
-@app.route('/')
-def home():
-    return render_template('index.html')
 
 @app.route('/', methods=['POST','GET', 'OPTIONS'])
 
@@ -34,6 +31,8 @@ def receive_data():
 
     # Respond to the client
     return jsonify({'message': 'Data received and saved successfully'})
+def home():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',debug=True, port=5000)
