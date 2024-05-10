@@ -7,8 +7,7 @@ CORS(app)
 uabval = ""
 
 @app.route('/', methods=['POST','GET', 'OPTIONS'])
-def index():
-      return render_template('index.html')
+
 def receive_data():
     if request.method == 'GET':
         # Read data from the text file
