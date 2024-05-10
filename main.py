@@ -31,6 +31,8 @@ def receive_data():
 
     # Respond to the client
     return jsonify({'message': 'Data received and saved successfully'})
+@app.route('/')
+
 def home():
     return render_template('index.html')
 
