@@ -5,7 +5,7 @@ app = Flask(__name__)
 CORS(app)
 
 uabval = ""
-@app.route('/home')
+@app.route('/')
 def home():
     return render_template('index.html')
 
